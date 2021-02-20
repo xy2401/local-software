@@ -1,20 +1,40 @@
 本项目是为介绍一些基本的软件,以及存放在局域网方便下载,避免搭建新环境的第一步是漫长的等待下载。
 
-推荐从官网下载最新的版本,如需要从其他地方下载注意校验和官方的校验和是否一致,
-避免发生类似`XcodeGhost`开发工具带毒事件。
+
+# 
+
+# 说明
+ 
+    README.md 说明文件
+    release/ 软件存放目录
+    sha256sum.list sha256值与文件列表对应
+    download.html 读取README.md 关联 sha256sum.list 跳转下载
+
+ 
+    ## 列出所有文件sha256
+    find  ./*  -type f -exec sha256sum {} \; > sha256sum.list
+
+
+
  
 # 开源与免费
 
-# 家庭版与商业版本
+# 版本
 
-# 免安装版本
+家庭版与商业版本
 
-# 特供版
+免安装版本
+
+  特供版
 
 
 # 校验和
 
+推荐从官网下载最新的版本,如需要从其他地方下载注意校验和官方的校验和是否一致,
+避免发生类似`XcodeGhost`开发工具带毒事件,参考`Apache Software Foundation`的
+[HOW TO VERIFY DOWNLOADED FILES](https://www.apache.org/info/verification.html).
  
+
 在`Linux`上，使用 `sha256sum` 或 `md5sum` 命令行工具来验证下载文件的完整性。  
 在`OS X`上，使用`shasum -a 256`或`md5`命令行工具来验证下载文件的完整性。
 在`Windows PowerShell 5.0`上 ，可以使用`Get-FileHash`命令行工具来验证下载文件的完整性。
@@ -47,9 +67,17 @@ SHA256: 92994C5546A3D80D470CD6BA0A6248216F0C069C2A16F64437E4F421775D6BE9
 SHA1: D440B082C0A0F8173381BC628D35753261918BA0
 BLAKE2sp: 6E2010FE7AA20DD93943C8591F679DB44F6D4F719541002E8B9CAC4DE9E1068D
 ```
+82283d1d0793f2ded0d6c06212a08074  jdk-15.0.2_windows-x64_bin.zip
 
+[Oracle SQL Developer Downloads](https://www.oracle.com/tools/downloads/sqldev-downloads.html)
+提供了`MD5`与`SHA1`的值
+[JDK 11.0.10 checksum](https://www.oracle.com/webfolder/s/digest/11-0-10-checksum.html)
+提供了sha256的值
+[Fedora 33 x86_64 CHECKSUM](https://getfedora.org/static/checksums/Fedora-Workstation-33-1.2-x86_64-CHECKSUM)
+提供了 `SHA256`和`PGP`
+[tomcat-8](https://downloads.apache.org/tomcat/tomcat-8/v8.5.63/bin/)提供了`SHA256`
 
-
+ 
 
 
 # 命令行参数
