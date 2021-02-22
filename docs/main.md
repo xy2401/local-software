@@ -13,6 +13,11 @@
 ChromeStandaloneSetup64.exe 374F6931FCB10D75D1E3594CD9471428C0995CB60B5DF7C89C9D9C0E2D7E2FA8
 
 
+如果想要免安装,更开放可以选择
+[Download Chromium - The Chromium Projects](https://www.chromium.org/getting-involved/download-chromium)
+
+
+
 
 [Firefox 浏览器](https://www.mozilla.org/zh-CN/firefox/new/)默认下载的是一个较小的网络安装程序,
 [完整版](https://www.mozilla.org/zh-CN/firefox/all/#product-desktop-release)有简体中文及其他 90 多种语言版本供您选择。

@@ -5,14 +5,15 @@
 Git-2.30.1-64-bit.exe                                  f1358ec93e8975fb4eaacbb71e010fadcb097fb00b8af9ab6d003ba69c08367d     
 PortableGit-2.30.1-64-bit.7z.exe                       54bb3a0035bad71148fb6c771942a880d46a8dc6f3a0cb42eda88ca1374f1570    
 
-[TortoiseGit](https://tortoisegit.org/) Git的GUI客户端,需要本地安装git。   
-TortoiseGit-2.11.0.0-64bit.msi                         e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855     
-TortoiseGit-LanguagePack-2.11.0.0-64bit-zh_CN.msi      e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855    
+[TortoiseGit](https://tortoisegit.org/) Git的GUI客户端,需要本地安装git。     
+TortoiseGit-2.11.0.0-64bit.msi                     8A2576EC68E60F0CEF7B0A9581E9018B954F265FAF5FCE1D7DF97814AB36BF3A           
+TortoiseGit-LanguagePack-2.11.0.0-64bit-zh_CN.msi  4A5B7F35B9B1FE38D2B1DA9F8086F716F7E748694163404639D47C37D5258867  
+      
 
 
-[TortoiseSVN](https://tortoisesvn.net/) Git的GUI客户端,安装过程也可以勾选安装svn命令。
-LanguagePack_1.14.1.29085-x64-zh_CN.msi                69f6e2cd17d824efbb50f4b790b3d2e64222f67f9b058c4a82d0e308773718da    
-TortoiseSVN-1.14.1.29085-x64-svn-1.14.1.msi            8a3b08ea8d87324c7d75f7ba07322a360bb70167a337a01a3470d27bcdbbd672    
+[TortoiseSVN](https://tortoisesvn.net/) Git的GUI客户端,安装过程也可以勾选安装svn命令。        
+LanguagePack_1.14.1.29085-x64-zh_CN.msi                69f6e2cd17d824efbb50f4b790b3d2e64222f67f9b058c4a82d0e308773718da       
+TortoiseSVN-1.14.1.29085-x64-svn-1.14.1.msi            8a3b08ea8d87324c7d75f7ba07322a360bb70167a337a01a3470d27bcdbbd672      
 
 [MobaXterm](https://mobaxterm.mobatek.net/) 功能强大的SSH工具。
 拥有一个All-In-One网络应用来完成您的远程任务有很多优势，例如，当您使用SSH连接到远程服务器时，将自动弹出一个图形化的SFTP浏览器，以便直接编辑您的远程文件 
@@ -43,6 +44,41 @@ WinSCP-5.17.10-Setup.exe                        16caaceb26e654d1ffebe159751bbd46
 类似的软件有[ConEmu](https://conemu.github.io/),[Cmder](https://cmder.net/)。
 
 
+
+[Node.js®](https://nodejs.org) 是一个基于 [Chrome V8](https://v8.dev/) 引擎 的 JavaScript 运行时。
+
+
+
+15.9.0 当前发布版
+node-v15.9.0-x64.msi  75CFBFABE1B9539602200853DFAC45643EC92121332A00F59B1109D8038568EB
+
+
+14.15.5 长期支持版
+node-v14.15.5-x64.msi  B53CBF58663D31FEFAEE7F6439287EF07D55A9AB4DAC6F2AC7182CD85D090170
+
+# Apache
+[Welcome to The Apache Software Foundation!](https://www.apache.org/)
+
+
+apache-maven-3.6.3-bin.zip  444522B0AF3A85E966F25C50ADFCD00A1A6FC5FCE79F503BFF096E02B9977C2E
+
+
+gradle-6.8.2-all.zip 1433372D903FFBA27496F8D5AF24265310D2DA0D78BF6B4E5138831D4FE066E9
+
+httpd-2.4.46-o111j-x64-vc15.zip D35608AEE793BD3D398E4573517BD63FFFC2691003E8A6BEEA0A666580C290D0
+
+
+# 编辑器
+ 
+
+[Notepad++](https://notepad-plus-plus.org/) 是免费的源代码编辑器和支持多种语言的Notepad替换
+
+npp.7.9.3.Installer.x64.exe SHA256: 942A5FA284DF6018AEC19110B0D9E68742194BFD44DD984B515ADF103D99775A
+
+
+[Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
+
+VSCodeUserSetup-x64-1.53.2.exe  9E5F5C507513F5CE7FEDC83977F2F6E3FE51C3BCFA46E769F421D5386391E487
 
 
 # Database
