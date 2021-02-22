@@ -45,6 +45,9 @@ fetch("./docs/checksum.md")
                 info = null;//清空数据
             }
         }
+
+        //延迟加载 不然sumMap还没有计算好 下面处理就来了
+        import('./docsify.min.js');
     });
 
 
