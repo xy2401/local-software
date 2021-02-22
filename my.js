@@ -6,7 +6,7 @@ let sumList = [];
 const md5Re = /\b[0-9a-f]{32}\b/g;
 const sha1Re = /\b[0-9a-f]{40}\b/g;
 const sha256Re = /\b[0-9a-f]{64}\b/g;
- 
+
 fetch("./docs/checksum.md")
     .then(response => response.text())
     .then(data => {
@@ -56,7 +56,7 @@ function beforeEachM(content) {
     return content;
 }
 
-function afterEachH(html, next) {
+async function afterEachH(html, next) {
 
     //console.log(html);
     //正则表达式提取去重
@@ -67,6 +67,7 @@ function afterEachH(html, next) {
     let sums = [...md5s, ...sha1s, ...sha256s];
     console.log(sums);
 
+    let fetchPromise = [];
     for (let i = 0; i < sums.length; i++) {
 
         let info = sumMap.get(sums[i]);
@@ -74,23 +75,31 @@ function afterEachH(html, next) {
             console.log('Unknown checksum:' + sums[i]);
             continue;
         }
-        //存在信息判断文件是否存在
-       
-        fetch(info.name, { method: 'HEAD' })
-            .then(res => {
-               
-                if (res.ok) { 
- 
-                    let a=`<a href="${info.name}" title="md5:${info.md5};sha1:${info.sha1};sha256:${info.sha256};date:${info.date};size:${info.size};name:${info.name};">${sums[i]}</a>`;
-
-                    html = html.replaceAll(sums[i], a);
- 
-                } else if (res.status == 404) {
-                    console.log('文件未找到' + info.name);
-                }
-            });
-
+        //存在信息判断文件是否存在 多次请求防止阻塞
+        fetchPromise.push(fetch(info.name, { method: 'HEAD' })
+            .then(res => { return { 'res': res, 'info': info, 'sum': sums[i], 'status': info.status = res.status } }));
     }
+
+    //结果里面其实有很多数据,但是只要一个http的status就可以了 
+    let fetchResult = await Promise.all(fetchPromise);
+
+    //重新提取一边 不然多次替换字符串会有替换值被替换的问题
+    html = html.replaceAll(/\b[0-9a-f]{32,64}|\b/g, match => {
+
+        let info = sumMap.get(match);
+        if (!info) {
+            return match;
+        }
+        if (info.status == 200) {
+            return `<a href="${info.name}" title="date: ${info.date}\nsize: ${info.size}\nname: ${info.name}\n\nmd5: ${info.md5}\nsha1: ${info.sha1}\nsha256: ${info.sha256}">${match}</a>`;
+        } else if (info.status == 404) {
+            console.log('文件未找到' + info.name);
+        } else {
+            console.log('文件未知状态:' + info.status);
+        }
+        return match;
+    });
+
 
     // 解析成 html 后调用。
     // beforeEach 和 afterEach 支持处理异步逻辑
