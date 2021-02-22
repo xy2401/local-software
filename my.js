@@ -75,14 +75,16 @@ function afterEachH(html, next) {
             continue;
         }
         //存在信息判断文件是否存在
+       
         fetch(info.name, { method: 'HEAD' })
             .then(res => {
-                console.log(info.name + " rs.url" + res.url);
-                if (res.ok) {
-                    //文件存在则替换为超链接   
-                    html = html.replaceAll('dog', 'monkey')
+               
+                if (res.ok) { 
+ 
+                    let a=`<a href="${info.name}" title="md5:${info.md5};sha1:${info.sha1};sha256:${info.sha256};date:${info.date};size:${info.size};name:${info.name};">${sums[i]}</a>`;
 
-
+                    html = html.replaceAll(sums[i], a);
+ 
                 } else if (res.status == 404) {
                     console.log('文件未找到' + info.name);
                 }
